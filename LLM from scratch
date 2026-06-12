@@ -1,0 +1,10 @@
+I made my own dataset, my own processing and training code.
+The code is semi-vibe-coded with whatever LLM I had with VS-Code and PI (OpenRouter models).
+I checked and validated every single function and I deeply understand what every single code file is doing.
+The dataset processing took the most and I tried all sorts of things that didn't work, and I wasted a ton of time. Complicated solutions are the worst...
+
+I processed all the data on my own PC and I trained smaller versions of the LLM on my PC (Cachy OS Linux, AMD Ryzen 7 9700X CPU, 64GB RAM, Radeon RX 9070 16GB VRAM).
+As for the larger 340M model, I trained it on RunPod, ThunderCompute and Vast.ai. It would have taken forever on my PC.
+
+The total cost of this project was: ~$80 (Rs.7000), GPU costs only.
+That's because I have a decent PC to process the data. If I had more RAM, I could have processed some of the data much faster, especially when it comes to de-duplicating texts in memory
