@@ -1,0 +1,15 @@
+1. Tokens 
+2. Context Window
+3 Temperature and Sampling
+4. Embeddings
+5. RAG (Retrieval-Augmented Generation)
+6. Vector Databases 
+7. Fine-tuning
+8. Prompt Engineering vs Context Engineering
+9. System Prompts
+10. Agents and the Agentic Loop
+11. Tool Use / Function Calling 
+12. Hallucination
+13. Evals (Evaluations)
+14. Simple Chains vs Agents 
+15. Overengineering (The Concept Nobody Teaches)
