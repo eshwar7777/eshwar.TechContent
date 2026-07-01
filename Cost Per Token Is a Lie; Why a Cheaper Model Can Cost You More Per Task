@@ -1,0 +1,12 @@
+Cost Per Token vs. Cost Per Task
+Cost per token tells you the price of each token the model processes. Cost per task tells you the total price of getting a job done. The relationship between the two is not fixed — it depends on how many tokens each model needs to complete the task successfully. A model that costs twice as much per token but solves a task in one attempt can be cheaper than a model that costs half as much per token but needs three attempts, produces verbose output, or requires longer prompts to achieve the same quality.
+
+How It Works
+
+1. The Token Price List vs. The Real Bill: Every API has a published price per million input tokens and per million output tokens. Opus 4.8: $15/M input, $75/M output. Sonnet 5 (mid-tier): lower per-token rate. On a pure token-price comparison, Sonnet 5 wins. The real bill depends on total token consumption across the full task — including retries, validation loops, longer prompts needed to get quality output, and verbose completions that need more tokens to say the same thing.
+
+2. The Agentic Multiplier — Where Token Costs Compound: In a single-turn chat, cost per token and cost per task are nearly proportional. In agentic workflows — where a model takes multi-step actions, calls tools, reads outputs, and iterates — a less capable model accumulates token debt fast. Every failed subtask triggers a retry. Every ambiguous output triggers a verification step. Every tool call generates more context that must be re-fed into the next call. A model that completes an agentic task in 4 steps at $0.05/step beats a model that takes 12 steps at $0.02/step.
+
+3. The Verbosity Tax: More capable models are often more concise — they hit the answer in fewer output tokens. Less capable models over-explain, hedge, repeat context, and produce longer outputs that say less. Output tokens are often priced higher than input tokens. A model that produces 800 tokens to answer a question that a better model answers in 200 tokens can cost more in output fees alone, even at a lower per-token rate.
+
+4. The Sonnet 5 Paradox: Sonnet 5 is a major capability upgrade over prior Sonnet models — matching Opus 4.8 on benchmarks. But benchmarks measure single-turn accuracy, not agentic token efficiency. In production coding workflows, where agents run many-step tasks with large context windows, Sonnet 5’s token consumption patterns may produce higher total bills than Opus 4.8 despite the lower per-token rate. This isn’t a flaw — it’s a measurement problem. Benchmarks don’t bill you.
