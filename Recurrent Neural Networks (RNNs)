@@ -1,0 +1,3 @@
+Recurrent neural networks (RNNs) are a class of artificial neural networks designed for processing sequential data, such as text, speech, and time series, where the order of elements is important. 2 main characteristics:
+RNNs process one input at a time. Instead of taking all of X in one big gulp, RNNs look at one data point at a time — like reading a sentence word by word, or stepping through a stock price day by day. This allows them to focus on how each input evolves over time.
+RNNs are recursive. Yes, the information flows left to right, but at each step, it can also look at what happened before (kind of a right to left motion). It’s like a left-to-right with memory.
